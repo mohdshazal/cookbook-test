@@ -1,7 +1,7 @@
 import React from 'react'
 import { Recipe } from './types/common'
 
-const RecipeDetail = ({ recipe }:{recipe:Recipe}) => {
+const RecipeDetail = ({ recipe }: { recipe: Recipe }) => {
     return (
         <div className='border-4'>
             <div>
@@ -18,7 +18,7 @@ const RecipeDetail = ({ recipe }:{recipe:Recipe}) => {
                 <p>Ingredients</p>
                 <ul className='list-disc'>
                     {
-                        recipe.ingredients.map((ingredient,key)=>{
+                        recipe.ingredients.map((ingredient, key) => {
                             return <li key={key}>{ingredient}</li>
                         })
                     }

@@ -5,7 +5,7 @@ import RecipeDetail from "./RecipeDetail";
 import "./App.css";
 import { Recipe } from "./types/common";
 
-const recipes:Recipe[] = [
+const recipes: Recipe[] = [
   {
     author: "Jim",
     name: "Chicken Curry",
@@ -145,15 +145,15 @@ const recipes:Recipe[] = [
 ]
 
 function App() {
-  const [selectedRecipe, setSelectedRecipe] = useState<Recipe|null>(null);
+  const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   return (
     <div className="flex p-10 gap-4">
       <div className="w-1/3 border-4">
-      {
-        recipes.map((recipe:Recipe,key:number)=>{
-          return <RecipeList recipe={recipe} key={key} onRecipeSelect={setSelectedRecipe} />
-        })
-      }
+        {
+          recipes.map((recipe: Recipe, key: number) => {
+            return <RecipeList recipe={recipe} key={key} onRecipeSelect={setSelectedRecipe} />
+          })
+        }
       </div>
       <div className="w-2/3">
         {selectedRecipe && <RecipeDetail recipe={selectedRecipe} />}
